@@ -1,0 +1,20 @@
+{
+    "name": "BA Timesheet Detail",
+    "doctype": "DocType",
+    "module": "BizAxl Projects",
+    "istable": 1,
+    "fields": [
+        {"fieldname": "activity_type", "fieldtype": "Link", "label": "Activity Type", "options": "BA Activity Type", "in_list_view": 1},
+        {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "BA Project", "in_list_view": 1},
+        {"fieldname": "task", "fieldtype": "Link", "label": "Task", "options": "BA Task", "in_list_view": 1},
+        {"fieldname": "from_time", "fieldtype": "Datetime", "label": "From", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "to_time", "fieldtype": "Datetime", "label": "To", "in_list_view": 1},
+        {"fieldname": "hours", "fieldtype": "Float", "label": "Hours", "in_list_view": 1},
+        {"fieldname": "billing_hours", "fieldtype": "Float", "label": "Billing Hours"},
+        {"fieldname": "billing_rate", "fieldtype": "Currency", "label": "Billing Rate"},
+        {"fieldname": "billing_amount", "fieldtype": "Currency", "label": "Billing Amount", "read_only": 1},
+        {"fieldname": "costing_rate", "fieldtype": "Currency", "label": "Costing Rate"},
+        {"fieldname": "costing_amount", "fieldtype": "Currency", "label": "Costing Amount", "read_only": 1},
+        {"fieldname": "description", "fieldtype": "Text", "label": "Description"}
+    ]
+}

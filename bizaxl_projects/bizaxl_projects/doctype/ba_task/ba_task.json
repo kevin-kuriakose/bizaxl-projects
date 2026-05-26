@@ -1,0 +1,40 @@
+{
+    "name": "BA Task",
+    "doctype": "DocType",
+    "module": "BizAxl Projects",
+    "autoname": "naming_series:",
+    "naming_series": "TASK-.YYYY.-",
+    "title_field": "subject",
+    "search_fields": "subject,project,status",
+    "fields": [
+        {"fieldname": "naming_series", "fieldtype": "Select", "options": "TASK-.YYYY.-"},
+        {"fieldname": "subject", "fieldtype": "Data", "label": "Subject", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "BA Project", "in_list_view": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status",
+         "options": "Open\nWorking\nPending Review\nOverdue\nCompleted\nCancelled",
+         "default": "Open", "in_list_view": 1},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "priority", "fieldtype": "Select", "label": "Priority",
+         "options": "Low\nMedium\nHigh\nUrgent", "default": "Medium", "in_list_view": 1},
+        {"fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "User"},
+        {"fieldname": "type", "fieldtype": "Data", "label": "Task Type"},
+        {"fieldname": "sec_dates", "fieldtype": "Section Break", "label": "Dates"},
+        {"fieldname": "exp_start_date", "fieldtype": "Date", "label": "Expected Start"},
+        {"fieldname": "exp_end_date", "fieldtype": "Date", "label": "Expected End", "in_list_view": 1},
+        {"fieldname": "act_start_date", "fieldtype": "Date", "label": "Actual Start"},
+        {"fieldname": "act_end_date", "fieldtype": "Date", "label": "Actual End"},
+        {"fieldname": "col2", "fieldtype": "Column Break"},
+        {"fieldname": "progress", "fieldtype": "Percent", "label": "Progress %", "default": "0"},
+        {"fieldname": "estimated_time", "fieldtype": "Float", "label": "Estimated Hours"},
+        {"fieldname": "actual_time", "fieldtype": "Float", "label": "Actual Hours", "read_only": 1},
+        {"fieldname": "sec_deps", "fieldtype": "Section Break", "label": "Dependencies"},
+        {"fieldname": "depends_on", "fieldtype": "Table", "label": "Depends On", "options": "BA Task Depends On"},
+        {"fieldname": "description", "fieldtype": "Text Editor", "label": "Description"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Projects Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Projects User", "read": 1, "write": 1, "create": 1},
+        {"role": "Employee", "read": 1}
+    ]
+}

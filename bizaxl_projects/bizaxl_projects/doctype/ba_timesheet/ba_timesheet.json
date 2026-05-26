@@ -1,0 +1,30 @@
+{
+    "name": "BA Timesheet",
+    "doctype": "DocType",
+    "module": "BizAxl Projects",
+    "autoname": "naming_series:",
+    "naming_series": "TS-.YYYY.-",
+    "is_submittable": 1,
+    "fields": [
+        {"fieldname": "naming_series", "fieldtype": "Select", "options": "TS-.YYYY.-"},
+        {"fieldname": "employee", "fieldtype": "Link", "label": "Employee", "options": "BA Employee", "in_list_view": 1},
+        {"fieldname": "employee_name", "fieldtype": "Data", "label": "Employee Name", "read_only": 1},
+        {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "end_date", "fieldtype": "Date", "label": "End Date", "in_list_view": 1},
+        {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "BA Company"},
+        {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "BA Customer"},
+        {"fieldname": "time_logs", "fieldtype": "Table", "label": "Time Logs", "options": "BA Timesheet Detail", "reqd": 1},
+        {"fieldname": "total_hours", "fieldtype": "Float", "label": "Total Hours", "read_only": 1, "in_list_view": 1},
+        {"fieldname": "total_billing_amount", "fieldtype": "Currency", "label": "Total Billing", "read_only": 1, "in_list_view": 1},
+        {"fieldname": "total_costing_amount", "fieldtype": "Currency", "label": "Total Costing", "read_only": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status",
+         "options": "Draft\nSubmitted\nBilled\nCancelled", "default": "Draft", "in_list_view": 1}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1},
+        {"role": "Projects Manager", "read": 1, "write": 1, "create": 1, "submit": 1},
+        {"role": "Projects User", "read": 1, "write": 1, "create": 1},
+        {"role": "Employee", "read": 1, "write": 1, "create": 1}
+    ]
+}

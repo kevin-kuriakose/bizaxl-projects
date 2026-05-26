@@ -1,0 +1,8 @@
+{
+    "app_name": "bizaxl_projects",
+    "display_name": "BizAxl Projects",
+    "description": "Project & Timesheet management",
+    "show_modules": ["BizAxl Projects"],
+    "hide_modules": [],
+    "optional_modules": []
+}

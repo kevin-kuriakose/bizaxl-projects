@@ -1,0 +1,20 @@
+{
+    "name": "BA Project Update",
+    "doctype": "DocType",
+    "module": "BizAxl Projects",
+    "autoname": "naming_series:",
+    "naming_series": "PU-.YYYY.-",
+    "fields": [
+        {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "BA Project", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "date", "fieldtype": "Date", "label": "Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status",
+         "options": "Open\nAt Risk\nOverdue\nCompleted", "in_list_view": 1},
+        {"fieldname": "progress", "fieldtype": "Percent", "label": "Progress %"},
+        {"fieldname": "description", "fieldtype": "Text Editor", "label": "Update", "reqd": 1}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Projects Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Projects User", "read": 1, "write": 1, "create": 1}
+    ]
+}

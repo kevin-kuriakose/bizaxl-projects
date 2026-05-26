@@ -1,0 +1,10 @@
+{
+    "name": "BA Task Depends On",
+    "doctype": "DocType",
+    "module": "BizAxl Projects",
+    "istable": 1,
+    "fields": [
+        {"fieldname": "task", "fieldtype": "Link", "label": "Task", "options": "BA Task", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "subject", "fieldtype": "Data", "label": "Subject", "fetch_from": "task.subject", "read_only": 1, "in_list_view": 1}
+    ]
+}
