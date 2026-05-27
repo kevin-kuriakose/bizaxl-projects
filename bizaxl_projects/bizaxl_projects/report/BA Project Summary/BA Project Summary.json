@@ -7,5 +7,37 @@
  "name": "BA Project Summary",
  "ref_doctype": "BA Project",
  "report_name": "BA Project Summary",
- "report_type": "Script Report"
+ "report_type": "Script Report",
+ "filters": [
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "BA Company"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nOpen\nCompleted\nCancelled"
+  }
+ ],
+ "columns": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
+  }
+ ]
 }
