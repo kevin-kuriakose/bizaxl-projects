@@ -1,0 +1,11 @@
+{
+ "add_total_row": 1,
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "BizAxl Projects",
+ "name": "BA Project Summary",
+ "ref_doctype": "BA Project",
+ "report_name": "BA Project Summary",
+ "report_type": "Script Report"
+}
