@@ -7,3 +7,7 @@ app_license = "mit"
 app_version = "1.0.0"
 
 required_apps = ["frappe", "bizaxl_erp"]
+
+fixtures = [
+    {"doctype": "Workspace", "filters": [["name", "in", ["Projects"]]]},
+]
